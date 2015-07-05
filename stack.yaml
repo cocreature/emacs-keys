@@ -6,4 +6,5 @@ extra-deps:
 - data-flags-0.0.3.1
 - storable-record-0.0.3
 - utility-ht-0.0.10
+- doctest-0.10.0
 resolver: nightly-2015-07-03
