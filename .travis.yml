@@ -3,6 +3,8 @@ before_install:
   # Instructions taken from https://github.com/commercialhaskell/stack/wiki/Downloads
   - wget -q -O- http://download.fpcomplete.com/ubuntu/fpco.key | sudo apt-key add -
   - echo 'deb http://download.fpcomplete.com/ubuntu/precise stable main' | sudo tee /etc/apt/sources.list.d/fpco.list
+  - "echo 'APT::Default-Release \"precise\";' | sudo tee /etc/apt/apt.conf.d/default-release"
+  - "echo 'deb http://archive.ubuntu.com/ubuntu/ utopic main universe' | sudo tee /etc/apt/sources.list.d/utopic.list"
   - sudo apt-get update
   - sudo apt-get install stack -y
   - sudo apt-get install pkg-config xutils-dev bison flex libx11-dev libxcb-xkb-dev x11-xkb-utils x11proto-core-dev x11proto-kb-dev xkb-data xvfb -y
