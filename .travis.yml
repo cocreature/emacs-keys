@@ -5,7 +5,7 @@ before_install:
   - echo 'deb http://download.fpcomplete.com/ubuntu/precise stable main' | sudo tee /etc/apt/sources.list.d/fpco.list
   - sudo apt-get update
   - sudo apt-get install stack -y
-  - sudo apt-get install libxkbcommon-dev
+  - sudo apt-get install libxkbcommon-dev -y
 install:
   - stack setup
 script:
