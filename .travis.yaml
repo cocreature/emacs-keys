@@ -12,3 +12,4 @@ install:
 
 script:
   - stack test
+sudo: required
