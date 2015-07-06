@@ -1,5 +1,5 @@
 name:                emacs-keys
-version:             0.0.1.0
+version:             0.0.2.0
 synopsis:            library to parse emacs style keybinding into the modifiers and the chars
 description:         Allows parsing emacs style keybindings like "M-a", "C-M-a" or
                      "M-Return". For convenience a TH helper that turns parse

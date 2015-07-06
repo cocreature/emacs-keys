@@ -17,6 +17,6 @@ mkEmacsKeys s =
       [|($(lift mods)
         ,$(ListE <$>
            traverse (\(Keysym x) ->
-                       AppE (VarE (mkName "Keysym")) <$>
+                       AppE (ConE (mkName "Keysym")) <$>
                        lift x)
                     keysyms))|]
