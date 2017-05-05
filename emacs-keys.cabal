@@ -31,7 +31,7 @@ library
   exposed-modules:     EmacsKeys
   other-modules:       EmacsKeys.Parser
                      , EmacsKeys.TH
-  build-depends:       base             >= 4.9  && < 5
+  build-depends:       base             >= 4.8  && < 5
                      , template-haskell >= 2.10 && < 2.12
                      , xkbcommon        >= 0.0  && < 0.1
                      , th-lift          >= 0.7  && < 0.8
@@ -46,7 +46,7 @@ test-suite emacs-keys-test
   hs-source-dirs:      test
   main-is:             Test.hs
   build-depends:       emacs-keys
-                     , base       >= 4.9 && < 5
+                     , base       >= 4.8 && < 5
                      , hspec      >= 2.2 && < 2.5
                      , QuickCheck >= 2.9 && < 2.10
                      , xkbcommon  >= 0.0 && < 0.1
@@ -57,5 +57,5 @@ test-suite doctests
   type:                exitcode-stdio-1.0
   hs-source-dirs:      test
   main-is:             Doctests.hs
-  build-depends:       base    >= 4.9  && < 5
+  build-depends:       base    >= 4.8  && < 5
                      , doctest >= 0.11 && < 0.12
