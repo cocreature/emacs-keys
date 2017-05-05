@@ -17,10 +17,15 @@ build-type:            Custom
 cabal-version:         >=1.10
 tested-with:           GHC == 7.10.3, GHC == 8.0.2
 
-
 source-repository      head
   type:                git
   location:            https://github.com/cocreature/emacs-keys.git
+
+custom-setup
+ setup-depends:
+   base >= 4.8 && <5,
+   Cabal,
+   cabal-doctest >= 1 && <1.1
 
 library
   exposed-modules:     EmacsKeys
@@ -54,9 +59,3 @@ test-suite doctests
   main-is:             Doctests.hs
   build-depends:       base    >= 4.9  && < 5
                      , doctest >= 0.11 && < 0.12
-
-custom-setup
- setup-depends:
-   base >= 4.8 && <5,
-   Cabal,
-   cabal-doctest >= 1 && <1.1
