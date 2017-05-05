@@ -1,9 +1,11 @@
 module Main where
 
-import Test.DocTest
+import Build_doctests (flags, pkgs, module_sources)
+import Data.Foldable (traverse_)
+import Test.DocTest (doctest)
 
-main =
-  doctest ["-isrc"
-          ,"src/EmacsKeys.hs"
-          ,"src/EmacsKeys/Parser.hs"
-          ,"src/EmacsKeys/TH.hs"]
+main :: IO ()
+main = do
+    doctest args
+  where
+    args = flags ++ pkgs ++ module_sources
